@@ -1,6 +1,6 @@
 // 常見單字
 let commonWords = [
-  "about","after","black","block","begin","basic","candy","chair","check","clear","clean","close","count","dream","drink","daily","drive","early","earth","error","enter","found","guest","games","ghost","grade","great","group","heart","horse",
+  "about","after","black","block","begin","basic","candy","chair","check","clear","clean","close","count","dream","drink","drive","daily","early","earth","error","enter","found","guest","games","ghost","grade","great","group","heart","horse",
   "hotel","image","juice","lemon","laugh","later","label","learn","limit","lucky","lunch","light","movie","music","maybe","model","month","noise","nurse","north","night","often","other","outer","party","peace","phone",
   "price","place","quick","rebus","radio","round","right","range","reach","since","space","share","slice","style","speed","sound","shirt","store","snake","smile","smoke","shake","shape","teach","touch","train","thank","those",
   "think","tiger","title","table","topic","today","under","until","voice","video","while","watch","wrong","which","woman","water","world","young"
@@ -70,12 +70,6 @@ new Vue({
 
     answer: [],
     words: [],  // 出題用單字，在 initGame() 時會放入題庫
-    // words: [  // 出題用單字
-    //   "about","after","black","block","begin","basic","candy","chair","check","clear","clean","close","count","dream","drink","daily","drive","early","earth","enter","found","guest","games","ghost","grade","great","group","heart","horse",
-    //   "hotel","image","juice","lemon","laugh","later","label","learn","lucky","lunch","light","movie","music","maybe","model","month","noise","nurse","north","night","often","other","outer","party", "phone",
-    //   "price","place","quick","rebus","radio","round","right","range","reach","since","space","share","slice","style","sound","shirt","store","snake","smile","smoke","shake","shape","teach","touch","train","thank","those",
-    //   "think","tiger","table","topic","today","under","until","voice","video","while","watch","wrong","which","woman","water","world","young"
-    // ],
     words_: {  // 判斷有效性單字
       "cigar": "雪茄", "rebut": "駁斥", "sissy": "娘娘腔", "humph": "哼", "awake": "醒來", "blush": "", "focal": "焦點的", "evade": "", "naval": "", "serve": "服務", "heath": "荒地", "dwarf": "", "model": "模型", "karma": "", "stink": "", "grade": "等級", "quiet": "", "bench": "長椅", "abate": "", "feign": "", "major": "主要/重大的", "death": "死亡", "fresh": "新鮮的", "crust": "脆皮", "stool": "凳子", "colon": "", "abase": "", "marry": "結婚", "react": "反應", "batty": "瘋狂的", "pride": "", "floss": "牙線", "helix": "螺旋", "croak": "", "staff": "職員", "paper": "紙/論文", "unfed": "", "whelp": "", "trawl": "", "outdo": "超越", "adobe": "", "crazy": "瘋狂的", "sower": "", "repay": "", "digit": "數字", "crate": "", "cluck": "", "spike": "長釘/牆頭釘", "mimic": "", "pound": "", "maxim": "格言", "linen": "亞麻布", "unmet": "", "flesh": "肉/果肉", "booby": "鰹鳥", "forth": "向前", "first": "第一", "stand": "站立", "belly": "", "ivory": "", "seedy": "", "print": "打印", "yearn": "", "drain": "排水", "bribe": "", "stout": "", "panel": "", "crass": "", "flume": "", "offal": "", "agree": "同意", "error": "錯誤", "swirl": "", "argue": "爭論", "bleed": "", "delta": "三角洲", "flick": "輕彈", "totem": "", "wooer": "", "front": "前面", "shrub": "", "parry": "", "biome": "", "lapel": "", "start": "開始", "greet": "迎接", "goner": "走了", "golem": "", "lusty": "精力充沛的", "loopy": "", "round": "圓形", "audit": "", "lying": "說謊", "gamma": "伽瑪", "labor": "勞工", "islet": "", "civic": "公民的", "forge": "鍛造", "corny": "", "moult": "換羽", "basic": "基本的", "salad": "沙拉", "agate": "", "spicy": "加有香料的", "spray": "", "essay": "", "fjord": "", "spend": "", "kebab": "", "guild": "公會", "aback": "", "motor": "馬達", "alone": "獨自的", "hatch": "", "hyper": "", "thumb": "拇指", "dowry": "", "ought": "", "belch": "打嗝", "dutch": "", "pilot": "飛行員", "tweed": "", "comet": "", "jaunt": "", "enema": "", "steed": "駿馬", "abyss": "", "growl": "", "fling": "", "dozen": "", "boozy": "", "erode": "", "world": "世界", "gouge": "", "click": "點擊", "briar": "", "great": "", "altar": "祭壇", "pulpy": "泥狀的", "blurt": "", "coast": "海岸", "duchy": "", "groin": "", "fixer": "固定器", "group": "團體", "rogue": "流氓", "badly": "", "smart": "", "pithy": "", "gaudy": "", "chill": "寒意", "heron": "蒼鷺", "vodka": "", "finer": "", "surer": "", "radio": "收音機", "rouge": "胭脂", "perch": "棲息", "retch": "", "wrote": "", "clock": "時鐘", "tilde": "", "store": "商店/儲存", "prove": "證明", "bring": "帶來", "solve": "解決", "cheat": "欺騙", "grime": "", "exult": "", "usher": "", "epoch": "時代", "triad": "", "break": "打破", "rhino": "", "viral": "", "conic": "", "masse": "", "sonic": "", "vital": "", "trace": "痕跡/跟蹤", "using": "", "peach": "桃子", "champ": "", "baton": "", "brake": "煞車", "pluck": "採摘", "craze": "", "gripe": "", "weary": "", "picky": "", "acute": "", "ferry": "", "aside": "", "tapir": "", "troll": "", "unify": "", "rebus": "", "boost": "", "truss": "", "siege": "", "tiger": "老虎", "banal": "", "slump": "", "crank": "", "gorge": "", "query": "", "drink": "喝", "favor": "偏愛", "abbey": "", "tangy": "撲鼻的", "panic": "恐慌", "solar": "太陽的", "shire": "", "proxy": "代理人", "point": "觀點", "robot": "機器人", "prick": "刺/扎", "wince": "畏縮", "crimp": "", "knoll": "", "sugar": "", "whack": "", "mount": "爬上", "perky": "活潑的", "could": "可以", "wrung": "", "light": "光", "those": "那些", "moist": "", "shard": "碎片", "pleat": "", "aloft": "", "skill": "技能", "elder": "年齡大的/長輩", "frame": "框架/幀", "humor": "幽默", "pause": "暫停", "ulcer": "", "ultra": "極端的", "robin": "知更鳥", "cynic": "", "agora": "", "aroma": "香氣", "caulk": "", "shake": "搖動/震動", "pupal": "", "dodge": "", "swill": "泔水", "tacit": "", "other": "其他的", "thorn": "", "trove": "", "bloke": "傢伙", "vivid": "活潑的", "spill": "濺出", "chant": "詠唱", "choke": "", "rupee": "", "nasty": "", "mourn": "", "ahead": "向前/事前", "brine": "", "cloth": "布", "hoard": "", "sweet": "", "month": "月", "lapse": "失誤/流逝", "watch": "手錶/觀看", "today": "今天", "focus": "焦點/聚焦", "smelt": "冶煉", "tease": "逗弄", "cater": "迎合", "movie": "電影", "lynch": "", "saute": "", "allow": "允許", "renew": "", "their": "他們的", "slosh": "", "purge": "", "chest": "", "depot": "", "epoxy": "", "nymph": "", "found": "創立", "shall": "", "harry": "", "stove": "火爐", "lowly": "", "snout": "", "trope": "", "fewer": "較少的", "shawl": "", "natal": "", "fibre": "", "comma": "逗號", "foray": "", "scare": "驚嚇", "stair": "", "black": "黑色", "squad": "", "royal": "", "chunk": "", "mince": "", "slave": "", "shame": "", "cheek": "臉頰", "ample": "", "flair": "", "foyer": "", "cargo": "", "oxide": "", "plant": "植物", "olive": "", "inert": "", "askew": "歪斜", "heist": "", "shown": "顯示", "zesty": "", "hasty": "", "trash": "垃圾", "fella": "", "larva": "", "forgo": "", "story": "", "hairy": "", "train": "火車", "homer": "本壘打", "badge": "徽章", "midst": "", "canny": "", "fetus": "", "butch": "", "farce": "", "slung": "", "tipsy": "", "metal": "金屬", "yield": "", "delve": "鑽研", "being": "存在", "scour": "", "glass": "玻璃", "gamer": "", "scrap": "碎片/小塊", "vouch": "", "asset": "資產", "tiara": "", "manor": "", "creak": "吱吱聲", "showy": "豔麗的/浮華的", 
       "phase": "", "froth": "", "depth": "", "gloom": "", "flood": "", "trait": "", "girth": "", "piety": "", "payer": "", "goose": "鵝", "float": "浮動", "donor": "捐贈者", "atone": "贖罪", "primo": "最初", "apron": "", "blown": "喘氣的", "cacao": "", "loser": "失敗者", "input": "輸入", "gloat": "", "awful": "", "brink": "邊緣", "smite": "", "beady": "", "rusty": "生鏽的", "retro": "", "droll": "", "gawky": "", "hutch": "", "pinto": "", "gaily": "", "egret": "白鷺", "lilac": "", "sever": "斷絕/分離", "field": "領域", "fluff": "", "hydro": "", "flack": "", "agape": "", "wench": "", "voice": "聲音", "stead": "代替", "stalk": "", "berth": "", "madam": "", "night": "晚上", "bland": "溫和的", "liver": "", "wedge": "", "augur": "", "roomy": "", "wacky": "", "flock": "", "angry": "", "bobby": "", "trite": "", "aphid": "", "tryst": "", "midge": "", "power": "權力/力量/功率", "elope": "", "cinch": "", "motto": "座右銘", "stomp": "", "upset": "打亂", "bluff": "虛張聲勢", "cramp": "", "quart": "", "coyly": "", "youth": "青年", "rhyme": "", "buggy": "", "alien": "", "smear": "", "unfit": "", "patty": "肉餅", "cling": "", "glean": "", "label": "標籤", "hunky": "", "khaki": "", "poker": "", "gruel": "", "twice": "兩次", "twang": "", "shrug": "", "treat": "對待/治療", "unlit": "", "waste": "浪費", "merit": "", "woven": "編織", "octal": "", "needy": "貧窮的", "clown": "小丑", "widow": "寡婦", "irony": "", "ruder": "", "gauze": "", "chief": "首領", "onset": "襲擊", "prize": "獎/珍視", "fungi": "", "charm": "", "gully": "", "inter": "", "whoop": "", "taunt": "", "leery": "", "class": "班級/類", "theme": "", "lofty": "", "tibia": "", "booze": "", "alpha": "α/最初", "thyme": "", "eclat": "", "doubt": "懷疑", "parer": "", "chute": "導槽", "stick": "棍棒/黏住", "trice": "瞬間", "alike": "一樣地", "sooth": "", "recap": "", "saint": "", "liege": "", "glory": "榮耀", "grate": "", "admit": "承認", "brisk": "", "soggy": "", "usurp": "", "scald": "", "scorn": "", "leave": "", "twine": "", "sting": "", "bough": "", "marsh": "", "sloth": "", "dandy": "花花公子", "vigor": "活力", "howdy": "", "enjoy": "", "valid": "", "ionic": "", "equal": "等於", "unset": "未設置", "floor": "地板", "catch": "抓住", "spade": "", "stein": "", "exist": "存在", "quirk": "", "denim": "", "grove": "", "spiel": "", "mummy": "", "fault": "缺陷", "foggy": "有霧的", "flout": "藐視", "carry": "攜帶", "sneak": "偷偷地走", "libel": "誹謗", "waltz": "", "aptly": "", "piney": "", "inept": "", "aloud": "大聲", "photo": "照片", "dream": "夢想", "stale": "", "vomit": "", "ombre": "", "fanny": "", "unite": "", "snarl": "", "baker": "麵包師", "there": "那裡", "glyph": "", "pooch": "", "hippy": "", "spell": "", "folly": "", "louse": "", "gulch": "", "vault": "", "godly": "", "threw": "扔了", "fleet": "", "grave": "墓穴", "inane": "", "shock": "震動/震驚", "crave": "", "spite": "", "valve": "", "skimp": "吝嗇", "claim": "宣稱/要求", "rainy": "", "musty": "", "pique": "", "daddy": "", "quasi": "", "arise": "升起/出現", "aging": "", "valet": "", "opium": "", "avert": "", "stuck": "", "recut": "", "mulch": "", "genre": "", "plume": "", "rifle": "", "count": "計數", "incur": "", "total": "總數", "wrest": "", "mocha": "", "deter": "嚇住", "study": "學習", "lover": "戀人", "safer": "", "rivet": "", "funny": "有趣的", "smoke": "抽煙", "mound": "", "undue": "", "sedan": "", "pagan": "", "swine": "", "guile": "", "gusty": "", "equip": "", "tough": "", "canoe": "", "chaos": "", "covet": "", "human": "人/人的", "udder": "", "lunch": "", "blast": "", "stray": "", "manga": "", "melee": "混戰", "lefty": "", "quick": "快速的", "paste": "漿糊", "given": "", "octet": "", "risen": "", "groan": "", "leaky": "漏的", "grind": "", "carve": "", "loose": "鬆散的", "sadly": "悲哀地", "spilt": "灑了", "apple": "蘋果", "slack": "鬆弛", "honey": "蜂蜜", "final": "最終的", "sheen": "", "eerie": "", "minty": "", "slick": "", "derby": "", "wharf": "", "spelt": "", "coach": "教練", "erupt": "", "singe": "", "price": "價格", "spawn": "", "fairy": "仙女", "jiffy": "", "filmy": "", "stack": "一堆", "chose": "選擇(動詞過去式)", "sleep": "睡覺", "ardor": "", "nanny": "保姆", "niece": "姪女", "woozy": "", "handy": "", "grace": "", "ditto": "", "stank": "", "cream": "奶油/膏", "usual": "通常的", "diode": "", "valor": "", "angle": "", "ninja": "", "muddy": "渾濁的", "chase": "追趕", "reply": "回答/答覆", "prone": "", "spoil": "", "heart": "心臟", "shade": "陰涼處/遮蔽", "diner": "", "arson": "", "onion": "洋蔥", "sleet": "", "dowel": "", "couch": "長椅", "palsy": "", "bowel": "腸", "smile": "", "evoke": "", "creek": "小河/溪", "lance": "長矛", "eagle": "鷹", "idiot": "笨蛋", "siren": "", "built": "", "embed": "", "award": "授予/獎", "dross": "", "annul": "", "goody": "", "frown": "", "patio": "", "laden": "", "humid": "潮濕的", "elite": "", "lymph": "", "edify": "", "might": "可能", "reset": "重啟", "visit": "", "gusto": "", "purse": "錢包", "vapor": "", "crock": "", "write": "", "sunny": "晴朗的", "loath": "", "chaff": "", "slide": "滑動", "queer": "", "venom": "", "stamp": "郵票", "sorry": "", "still": "", "acorn": "", "aping": "", "pushy": "", "tamer": "", "hater": "", "mania": "", "awoke": "", "brawn": "", "swift": "迅速地", "money": "錢", "hinge": "", "album": "專輯",  "crept": "躡手躡腳", "bayou": "", "atoll": "",
@@ -195,11 +189,11 @@ new Vue({
         this.letters_trans = ['', '', '', '', '', ''];
 
         // 載入題庫
-        if (this.questionBank == "junior") {
+        if (this.questionBank === "junior") {
           this.words = juniorWords;
           console.log('題庫：國中 1200 單字 (共', this.words.length, '個單字)');
         }
-        else if (this.questionBank == "senior") {
+        else if (this.questionBank === "senior") {
           this.words = seniorWords;
           console.log('題庫：高中 7000 單字 (共', this.words.length, '個單字)');
         }
@@ -231,7 +225,7 @@ new Vue({
       localStorage.setItem("gameState", JSON.stringify(this.gameState))
     },
     againGame: function () {
-      if (confirm('是否確定要"重新出題"？') == true) {
+      if (confirm('是否確定要"重新出題"？') === true) {
         this.gameState = {
           "gameStatus": "IN_PROGRESS",
           "boardState": ["", "", "", "", "", ""],
@@ -257,7 +251,7 @@ new Vue({
         inputKey = event.target.getAttribute('data-key');
         // console.log(inputKey);
 
-        if (inputKey == null || inputKey == "") return
+        if (inputKey === null || inputKey === "") return
 
         if (inputKey == "enter") {
           if (this.letterNum == 5) {
@@ -282,7 +276,7 @@ new Vue({
             this.gameState['boardState'][this.gameNum] = inputWord;
             this.gameState['evaluations'][this.gameNum] = this.letters[this.gameNum].map(e => e.state);
 
-            if (correctNum == 5) {
+            if (correctNum === 5) {
               this.gameStatus = "WIN";
               this.gameState['gameStatus'] = 'WIN';
               this.modalTitle = "恭喜猜中🎉🎉🎉";
@@ -291,7 +285,7 @@ new Vue({
               answer_ = answer_[0].toUpperCase() + answer_.slice(1);
               this.modalText = "正確答案：" + answer_ + " (" + this.words_[this.answer.join('')] + ")";
               new bootstrap.Modal(document.getElementById('statisticsModal')).show();
-            } else if (this.gameNum == 5) {
+            } else if (this.gameNum === 5) {
               this.gameStatus = "LOSE";
               this.gameState['gameStatus'] = 'LOSE';
               this.modalTitle = "遊戲結束，可惜沒猜中...";
@@ -305,8 +299,8 @@ new Vue({
               this.letterNum = 0;
             }
 
-            if (this.gameStatus != "IN_PROGRESS") {
-              if (this.gameStatus == "WIN") {
+            if (this.gameStatus !== "IN_PROGRESS") {
+              if (this.gameStatus === "WIN") {
                 this.statistics['currentStreak'] ++;
                 if (this.statistics['currentStreak'] > this.statistics['maxStreak']) {
                   this.statistics['maxStreak'] = this.statistics['currentStreak'];
@@ -319,7 +313,7 @@ new Vue({
               }
 
               this.statistics['gamesPlayed'] ++;
-              if (this.statistics['gamesWon'] != 0) {
+              if (this.statistics['gamesWon'] !== 0) {
                 this.statistics['winPercentage'] = Math.round((this.statistics['gamesWon']/this.statistics['gamesPlayed'])*100);
               }
 
@@ -333,7 +327,7 @@ new Vue({
             return
           }
         }
-        if (inputKey == "←") {
+        if (inputKey === "←") {
           if (this.letterNum > 0) {
             // console.log("刪除字母");
             this.letterNum--;
@@ -413,7 +407,9 @@ function updataKeyboards(keyboards, letters) {
       keyboard.forEach((k) => {
         if (value.str == '') { return; }
         if (value.str == k.str) {
-          k.state = value.state;
+          if (k.state !== "correct") {  // 避免一開始是 correct，之後被 present 覆蓋
+            k.state = value.state;
+          }
         }
       });
     });
